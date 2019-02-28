@@ -1,0 +1,137 @@
+/**
+ * Stylesheets for EuroSMS API Example. | Štýly pre Príklad použitia EuroSMS API.
+ */
+
+html,
+body {
+  padding: 5px;
+  width: 100%;
+  height: auto;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+small {
+  font-size: 90%;
+}
+
+input,
+.info,
+.error,
+select,
+textarea {
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+  font-weight: bold;
+  width: 150px;
+}
+
+input:invalid {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+textarea:invalid {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+input[type="button"] {
+  width: 120px;
+}
+
+input[type="reset"] {
+  font-style: italic;
+  width: 120px;
+}
+
+#send {
+  font-weight: bold;
+}
+
+#status {
+  font-weight: normal;
+}
+
+#tel {
+  width: 200px;
+}
+
+#sender {
+  width: 200px
+}
+
+#recip {
+  width: 200px
+}
+
+#unicode {}
+
+#msgMethod {
+  width: 200px;
+}
+
+#text {
+  width: 500px;
+  height: 200px;
+}
+
+.info,
+.error {
+  width: 500px;
+}
+
+.info {
+  color: green;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid green;
+}
+
+.error {
+  color: red;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:focus {
+  color: blue;
+}
+
+a:active {
+  color: blue;
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  word-wrap: break-word;
+}
+
+table th,
+td {
+  padding: 2px 5px;
+  text-align: center;
+}

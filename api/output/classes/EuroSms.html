@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-175560613"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-175560613" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/EuroSms.html">EuroSms</a></li>
+                                                    <li class="class"><a href="../classes/EuroSmsBase.html">EuroSmsBase</a></li>
+                                                    <li class="class"><a href="../classes/EuroSmsMessage.html">EuroSmsMessage</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>EuroSms</h1>
+                    <p><em>API wrapper class | Trieda zaobaľujúca API</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/EuroSms.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/EuroSms.html#method_sendMessage" class="">sendMessage()</a><br />
+                                                                    <a href="../classes/EuroSms.html#method_getMessageDeliveryStatus" class="">getMessageDeliveryStatus()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EuroSms.html#constant_SEND_METHOD_O2O" class="">SEND_METHOD_O2O</a><br />
+                                                                    <a href="../classes/EuroSms.html#constant_SEND_METHOD_O2M" class="">SEND_METHOD_O2M</a><br />
+                                                                    <a href="../classes/EuroSms.html#constant_SEND_METHOD_M2M" class="">SEND_METHOD_M2M</a><br />
+                                                                    <a href="../classes/EuroSms.html#constant_DELIVERY_STATUS_METHOD_ONE" class="">DELIVERY_STATUS_METHOD_ONE</a><br />
+                                                                    <a href="../classes/EuroSms.html#constant_DELIVERY_STATUS_METHOD_ANY" class="">DELIVERY_STATUS_METHOD_ANY</a><br />
+                                                                    <a href="../classes/EuroSms.html#constant_DELIVERY_STATUS_METHOD_GROUP" class="">DELIVERY_STATUS_METHOD_GROUP</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/EuroSms.html#method_formatPhoneNumber" class="">formatPhoneNumber()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EuroSms.html#property_default_country" class="">$default_country</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/EuroSms.html#property_mgr" class="">$mgr</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/eurosms_rest_api.html"><div class="path-wrapper">eurosms_rest_api.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/EuroSmsBase.html">\EuroSmsBase</a></div>
+                                                                                                    <div class="namespace-wrapper">\EuroSms</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SEND_METHOD_O2O" name="constant_SEND_METHOD_O2O" class="anchor"></a>
+            <article id="constant_SEND_METHOD_O2O" class="constant">
+                <h3 class="">SEND_METHOD_O2O</h3>
+                <pre class="signature">SEND_METHOD_O2O</pre>
+                <p><em>Message send method: One to One | Metóda odoslania správy: Jeden na Jeden</em></p>
+                <p>When using this method, every message from $messages list is sent through separate API request to every recipient in $recipients list, so for 2 messages with 2 recipients per each, 4 API requests are made. | Pri použití tejto metódy, každá správa zo zoznamu $messages je odoslaná cez samostaný API dotaz pre každého príjemcu zo zoznamu $recipients, t.j. pre 2 správy s 2 príjemcami každej správy sú vykonané 4 API dotazy.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/EuroSms.html#method_sendMessage"><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SEND_METHOD_O2M" name="constant_SEND_METHOD_O2M" class="anchor"></a>
+            <article id="constant_SEND_METHOD_O2M" class="constant">
+                <h3 class="">SEND_METHOD_O2M</h3>
+                <pre class="signature">SEND_METHOD_O2M</pre>
+                <p><em>Message send method: One to Many | Metóda odoslania správy: Jeden na Viac</em></p>
+                <p>When using this method, every message from $messages list is sent through separate API request to all recipients in $recipients list, so for 2 messages with 2 recipients per each, 2 API requests are made. | Pri použití tejto metódy, každá správa zo zoznamu $messages je odoslaná cez samostaný API dotaz pre všetkých príjemcov zo zoznamu $recipients, t.j. pre 2 správy s 2 príjemcami každej správy sú vykonané 2 API dotazy.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/EuroSms.html#method_sendMessage"><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SEND_METHOD_M2M" name="constant_SEND_METHOD_M2M" class="anchor"></a>
+            <article id="constant_SEND_METHOD_M2M" class="constant">
+                <h3 class="">SEND_METHOD_M2M</h3>
+                <pre class="signature">SEND_METHOD_M2M</pre>
+                <p><em>Message send method: Many to Many | Metóda odoslania správy: Viac na Viac</em></p>
+                <p>When using this method, all messages from $messages list are sent through single API request to all recipients in theirs $recipients list, so for 2 messages with 2 recipients per each, 1 API request is made. | Pri použití tejto metódy, všetky správy zo zoznamu $messages sú odoslané cez jediný API dotaz pre všetkých príjemcov zo zoznamu $recipients, t.j. pre 2 správy s 2 príjemcami každej správy je vykonaný 1 dotaz.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/EuroSms.html#method_sendMessage"><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_DELIVERY_STATUS_METHOD_ONE" name="constant_DELIVERY_STATUS_METHOD_ONE" class="anchor"></a>
+            <article id="constant_DELIVERY_STATUS_METHOD_ONE" class="constant">
+                <h3 class="">DELIVERY_STATUS_METHOD_ONE</h3>
+                <pre class="signature">DELIVERY_STATUS_METHOD_ONE</pre>
+                <p><em>Message delivery status method: One | Metóda stavu doručenia: Jeden</em></p>
+                <p>When using this method, delivery status for every message from $messages list is got through one API request per every message. | Pri použití tejto metódy, stav doručenia pre každú správu zo zoznamu $messages je získaný cez jeden API dotaz pre každú správu.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/EuroSms.html#method_getMessageDeliveryStatus"><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_DELIVERY_STATUS_METHOD_ANY" name="constant_DELIVERY_STATUS_METHOD_ANY" class="anchor"></a>
+            <article id="constant_DELIVERY_STATUS_METHOD_ANY" class="constant">
+                <h3 class="">DELIVERY_STATUS_METHOD_ANY</h3>
+                <pre class="signature">DELIVERY_STATUS_METHOD_ANY</pre>
+                <p><em>Message delivery status method: Any | Metóda stavu doručenia: Akýkoľvek</em></p>
+                <p>When using this method, delivery status for all messages from $messages list is got through single API request. | Pri použití tejto metódy, stav doručenia pre všetky správy zo zoznamu $messages je získaný cez jediný API dotaz.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/EuroSms.html#method_getMessageDeliveryStatus"><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_DELIVERY_STATUS_METHOD_GROUP" name="constant_DELIVERY_STATUS_METHOD_GROUP" class="anchor"></a>
+            <article id="constant_DELIVERY_STATUS_METHOD_GROUP" class="constant">
+                <h3 class="">DELIVERY_STATUS_METHOD_GROUP</h3>
+                <pre class="signature">DELIVERY_STATUS_METHOD_GROUP</pre>
+                <p><em>Message delivery status method: Group | Metóda stavu doručenia: Skupinový</em></p>
+                <p>When using this method, delivery status for all messages from $messages list is got through separate API request for every distinct message group $group_id. | Pri použití tejto metódy, stav doručenia pre všetky správy zo zoznamu $messages je získaný cez samostatný API dotaz pre každú odlišnú skupinu správ $group_id.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="../classes/EuroSms.html#method_getMessageDeliveryStatus"><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_default_country" name="property_default_country" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$default_country</h3>
+                <pre class="signature">$default_country : </pre>
+                <p><em>Default country for phone number operations | Predvolená krajina pre operácie s telefónnymi číslami</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_mgr" name="property_mgr" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$mgr</h3>
+                <pre class="signature">$mgr : </pre>
+                <p><em>Internal API manager object | Vnútorný objekt pre správu API</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(string  <span class="argument">$user = NULL</span>, string  <span class="argument">$password = NULL</span>, string  <span class="argument">$default_country = &#039;SK&#039;</span>) : void</pre>
+                <p><em>Initialize class | Inicializuj triedu</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$user </td>
+                                <td><p>API user name. | API meno používateľa.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$password </td>
+                                <td><p>API user password. | API heslo používateľa.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$default_country </td>
+                                <td><p>Default country code for phone number operations. | Predvolená krajina pre operácie s telefónnymi číslami.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_sendMessage" name="method_sendMessage" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">sendMessage()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">sendMessage(array&lt;mixed,\EuroSmsMessage&gt;  <span class="argument">$messages = array()</span>, string  <span class="argument">$method = \EuroSms::SEND_METHOD_M2M</span>) : array&lt;mixed,\EuroSmsMessage&gt;</pre>
+                <p><em>Send message(s) | Odoslať správu/y</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array&lt;mixed,<a href="../classes/EuroSmsMessage.html">\EuroSmsMessage</a>&gt;</td>
+                                <td>$messages </td>
+                                <td><p>List of messages to send. | Zoznam správ na odoslanie.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$method </td>
+                                <td><p>Send method. | Metóda odoslania (EuroSms::SEND_METHOD_*).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\EuroSmsException</dt>
+                            <dd><p>If exception occurs during request processing in PHP interface. | Ak nastane výnimka pri spracovaní dotazu v PHP rozhraní.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,<a href="../classes/EuroSmsMessage.html">\EuroSmsMessage</a>&gt;
+                                            &mdash; <p>List of messages with their send statuses (or FALSE or API error description string). | Zoznam správ s ich stavmi odoslania (alebo FALSE alebo textový popis chyby z API).</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMessageDeliveryStatus" name="method_getMessageDeliveryStatus" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMessageDeliveryStatus()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMessageDeliveryStatus(array&lt;mixed,\EuroSmsMessage&gt;  <span class="argument">$messages = array()</span>, string  <span class="argument">$method = \EuroSms::DELIVERY_STATUS_METHOD_ANY</span>) : array&lt;mixed,\EuroSmsMessage&gt;</pre>
+                <p><em>Get delivery status of message(s) | Získať stav doručenia správ(y)</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array&lt;mixed,<a href="../classes/EuroSmsMessage.html">\EuroSmsMessage</a>&gt;</td>
+                                <td>$messages </td>
+                                <td><p>List of sent messages. | Zoznam odoslaných správ (EuroSms::sendMessage()).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$method </td>
+                                <td><p>Delivery status method. | Metóda stavu doručenia (EuroSms::DELIVERY_STATUS_METHOD_*).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\EuroSmsException</dt>
+                            <dd><p>If exception occurs during API request processing in PHP interface. | Ak nastane výnimka pri spracovaní API dotazu v PHP rozhraní.</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,<a href="../classes/EuroSmsMessage.html">\EuroSmsMessage</a>&gt;
+                                            &mdash; <p>List of messages with their delivery statuses (or error description string). | Zoznam správ s ich stavmi doručenia (alebo textovým popisom chyby).</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_formatPhoneNumber" name="method_formatPhoneNumber" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">formatPhoneNumber()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">formatPhoneNumber(string  <span class="argument">$number</span>) : string</pre>
+                <p><em>Format phone number to international E.164 format | Uprav telefónne číslo do medzinárodného formátu E.164</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$number </td>
+                                <td><p>Phone number. | Telefónne číslo.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>Formatted phone number, or FALSE on error. | Upravené telefónne číslo, alebo FALSE pri chybe.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">eurosms_rest_api.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/eurosms_rest_api.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on February 28th, 2019 at 12:46.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

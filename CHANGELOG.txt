@@ -1,0 +1,15 @@
+EuroSMS 1.0.3
+------------------------
+- Minor code enhancements, enhanced error handling, added support for all send / delivery-status methods
+
+EuroSMS 1.0.2
+------------------------
+- Minor code enhancements
+
+EuroSMS 1.0.1, 2019-02-15
+------------------------
+- Updated to EuroSMS REST API 3.1.14
+
+EuroSMS 1.0.0, 2018-08-01
+------------------------
+- Initial version
