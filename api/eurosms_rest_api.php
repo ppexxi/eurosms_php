@@ -262,10 +262,10 @@ class EuroSms extends EuroSmsBase {
       $msg->unicode = (bool)$message->unicode;
       $msg->text = (string)$message->text;
 
-      $message->timestamp = time();
+      $message->timestamp = date('Y-m-d H:i:s');
 
       if ($message->schedule_timestamp) {
-        $msg->timestamp = (int)$message->schedule_timestamp;
+        $msg->timestamp = $message->schedule_timestamp;
       }
 
       $msgLen = $msg->unicode ? EuroSmsMessage::UNICODE_MESSAGE_LENGTH : EuroSmsMessage::DEFAULT_MESSAGE_LENGTH;
